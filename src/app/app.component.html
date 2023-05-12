@@ -1,4 +1,19 @@
 
-<h1 *ngFor="let user of users" appHighlight>{{user.firstName}}
-    <!-- <img src={{user.image}}/> -->
-</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>SL</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td><img src={{user.image}}/></td>
+      </tr>
+    </tbody>
+  </table>
